@@ -11,9 +11,7 @@
     "on Sunday",
     "before 8am on Monday"
   ],
-  "hashedBranchLength": 26,
-  "branchPrefix": "renovate/rv8-",
-  "additionalBranchPrefix": "{{parentDir}}",
+  "hashedBranchLength": 12,
   "separateMinorPatch": true,
   "prConcurrentLimit": 10,
   "branchConcurrentLimit": 10,
