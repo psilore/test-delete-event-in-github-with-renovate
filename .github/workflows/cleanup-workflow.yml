@@ -7,13 +7,6 @@ on:
         type: string
         description: "Environment details provided in the input"
 
-permissions:
-  actions: 'read'
-  security-events: 'write'
-  contents: 'read'
-  id-token: 'write'
-  checks: 'write'
-
 jobs:
   echo-ref:
     runs-on: ubuntu-latest
@@ -26,6 +19,6 @@ jobs:
 
       - name: Echo the event ref
         run: echo "The event ref is ${{ github.event.ref }}"
-
+        
       - name: Test action for renovate bot version updates
         uses: actions/checkout@v2
