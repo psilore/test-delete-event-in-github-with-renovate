@@ -19,6 +19,12 @@ jobs:
 
       - name: Echo the event ref
         run: echo "The event ref is ${{ github.event.ref }}"
+
+      - name: Echo the actor
+        run: |-
+          echo "The actor is ${{ github.actor }}"
+          echo "The actor is ${{ github.actor.name }}"
+          echo "The actor is ${{ github.actor.id }}"
         
       - name: Test action for renovate bot version updates
         uses: actions/checkout@v2
