@@ -19,3 +19,6 @@ jobs:
 
       - name: Echo the event ref
         run: echo "The event ref is ${{ github.event.ref }}"
+        
+      - name: Test action for renovate bot version updates
+        uses: actions/checkout@v2
