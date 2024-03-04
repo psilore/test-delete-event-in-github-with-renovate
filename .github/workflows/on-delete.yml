@@ -21,12 +21,12 @@ jobs:
       - name: Echo the ref_name
         run: echo "The ref_name is ${{ github.ref_name }}"
 
-      - name: List branches
-        run: git branch -vva
-
       - name: Echo the actor
         run: |-
           echo "The actor is ${{ github.actor }}"
         
       - name: Test action for renovate bot version updates
         uses: actions/checkout@v2
+
+      - name: List branches
+        run: git branch -vva
