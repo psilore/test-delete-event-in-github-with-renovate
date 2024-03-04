@@ -2,7 +2,34 @@ name: On delete
 on: delete
 
 jobs:
-  feature-cleanup:
-    uses: ./.github/workflows/cleanup-workflow.yml
-    with:
-      environment: dev
+  # feature-cleanup:
+  #   uses: ./.github/workflows/cleanup-workflow.yml
+  #   with:
+  #     environment: dev
+  echo-ref:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the environment
+        run: echo "The environment is ${{ inputs.environment }}"
+
+      - name: Echo the ref
+        run: echo "The ref is ${{ github.ref }}"
+
+      - name: Echo the event ref
+        run: echo "The event ref is ${{ github.event.ref }}"
+
+      - name: Echo the event head ref
+        run: echo "The event head ref is ${{ github.event.head_ref }}"
+
+      - name: Echo the event base ref
+        run: echo "The event base ref is ${{ github.event.base_ref }}"
+
+      - name: Echo the ref_name
+        run: echo "The ref_name is ${{ github.ref_name }}"
+
+      - name: Echo the actor
+        run: |-
+          echo "The actor is ${{ github.actor }}"
+        
+      - name: Test action for renovate bot version updates
+        uses: actions/checkout@v2
