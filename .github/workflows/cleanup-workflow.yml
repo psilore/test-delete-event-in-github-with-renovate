@@ -7,13 +7,6 @@ on:
         type: string
         description: "Environment details provided in the input"
 
-permissions:
-  actions: 'read'
-  security-events: 'write'
-  contents: 'read'
-  id-token: 'write'
-  checks: 'write'
-
 jobs:
   echo-ref:
     runs-on: ubuntu-latest
