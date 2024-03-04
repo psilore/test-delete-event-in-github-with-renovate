@@ -1,0 +1,8 @@
+name: On delete
+on: delete
+
+jobs:
+  feature-cleanup:
+    uses: ./.github/workflows/cleanup-workflow.yml
+    with:
+      environment: dev

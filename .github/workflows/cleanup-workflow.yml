@@ -1,0 +1,28 @@
+name: Cleanup Feature 
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+        description: "Environment details provided in the input"
+
+permissions:
+  actions: 'read'
+  security-events: 'write'
+  contents: 'read'
+  id-token: 'write'
+  checks: 'write'
+
+jobs:
+  echo-ref:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the environment
+        run: echo "The environment is ${{ inputs.environment }}"
+
+      - name: Echo the ref
+        run: echo "The ref is ${{ github.ref }}"
+
+      - name: Echo the event ref
+        run: echo "The event ref is ${{ github.event.ref }}"
