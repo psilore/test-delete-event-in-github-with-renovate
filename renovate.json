@@ -1,18 +1,21 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended",
+    ":prHourlyLimit4",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(fix)"
   ],
   "timezone": "Europe/Stockholm",
   "schedule": [
     "on Sunday",
     "before 8am on Monday"
   ],
-  "prConcurrentLimit": 10,
-  "branchConcurrentLimit": 10,
   "hashedBranchLength": 26,
   "branchPrefix": "rv8-",
   "separateMinorPatch": true,
+  "prConcurrentLimit": 10,
+  "branchConcurrentLimit": 10,
   "packageRules": [
     {
       "matchDatasources": [
