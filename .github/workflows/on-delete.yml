@@ -27,9 +27,3 @@ jobs:
         
       - name: Test action for renovate bot version updates
         uses: actions/checkout@v2
-
-      - name: Checkout specific commit
-        run: git checkout 8ae04be
-
-      - name: List branches
-        run: git branch -vva
