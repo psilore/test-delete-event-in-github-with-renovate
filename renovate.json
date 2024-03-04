@@ -11,7 +11,7 @@
     "on Sunday",
     "before 8am on Monday"
   ],
-  "hashedBranchLength": 12,
+  "hashedBranchLength": 20,
   "separateMinorPatch": true,
   "prConcurrentLimit": 10,
   "branchConcurrentLimit": 10,
