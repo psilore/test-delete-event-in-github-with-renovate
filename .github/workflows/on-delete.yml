@@ -3,7 +3,6 @@ on: delete
 
 jobs:
   feature-cleanup:
-    if: github.event.ref_type == 'branch' && startsWith(github.event.ref, 'feat-')
     uses: ./.github/workflows/cleanup-workflow.yml
     with:
       environment: dev
