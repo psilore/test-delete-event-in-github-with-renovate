@@ -18,14 +18,11 @@ jobs:
       - name: Echo the event ref
         run: echo "The event ref is ${{ github.event.ref }}"
 
-      - name: Echo the event head ref
-        run: echo "The event head ref is ${{ github.event.head_ref }}"
-
-      - name: Echo the event base ref
-        run: echo "The event base ref is ${{ github.event.base_ref }}"
-
       - name: Echo the ref_name
         run: echo "The ref_name is ${{ github.ref_name }}"
+
+      - name: List branches
+        run: git branch -vva
 
       - name: Echo the actor
         run: |-
